@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="242" viewBox="0 0 960 242" role="img" aria-labelledby="t d">
+  <title id="t">A synthetic CPU fixture with 96 percent good requests and a failing p99</title>
+  <desc id="d">Of 100 requests, 96 finish at one second and four finish at 22 seconds. The p99 end-to-end time exceeds the 20 second target. The full load level fails.</desc>
+  <style>
+    text {font-family:'Segoe UI',Arial,sans-serif;fill:#142e35}
+    .mono {font-family:Consolas,'Courier New',monospace;font-size:14px;letter-spacing:.8px}
+    .muted {fill:#405e64}
+    .tail {stroke-dasharray:100;stroke-dashoffset:0;animation:draw 1.8s ease-out}
+    @keyframes draw {from {stroke-dashoffset:100} to {stroke-dashoffset:0}}
+    @media (prefers-reduced-motion:reduce) {.tail {animation:none}}
+  </style>
+  <rect width="960" height="242" rx="12" fill="#f1f5ef"/>
+  <text x="34" y="39" class="mono muted">CPU FIXTURE  /  100 REQUESTS</text>
+  <text x="34" y="77" font-size="29" font-weight="650">Why 96% goodput can still fail the SLO</text>
+  <path d="M241 108v88h630" fill="none" stroke="#bdcdc7"/>
+  <g stroke="#d7e0d9"><path d="M382 108v88m140 -88v88m140 -88v88"/></g>
+  <path d="M802 100v96" stroke="#765333" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="802" y="93" text-anchor="middle" class="mono" fill="#664f37">20 s LIMIT</text>
+  <text x="34" y="137" font-size="18">96 requests</text>
+  <text x="34" y="180" font-size="18">4 requests</text>
+  <path d="M242 132h28" stroke="#21735b" stroke-width="9"/>
+  <circle cx="270" cy="132" r="5" fill="#145742"/>
+  <text x="283" y="138" font-size="17">1 s</text>
+  <path class="tail" d="M242 175h616" pathLength="100" stroke="#b04f37" stroke-width="9"/>
+  <circle cx="858" cy="175" r="5" fill="#963d29"/>
+  <text x="870" y="181" font-size="17" font-weight="650">22 s</text>
+  <g class="mono muted" text-anchor="middle"><text x="242" y="222">0 s</text><text x="382" y="222">5 s</text><text x="522" y="222">10 s</text><text x="662" y="222">15 s</text><text x="802" y="222">20 s</text></g>
+</svg>
