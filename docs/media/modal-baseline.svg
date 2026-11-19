@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="t d">
+  <title id="t">The proposed GLM-5.2 baseline on Modal</title>
+  <desc id="d">One warm replica spans eight H200 GPUs with tensor parallelism eight, native FP8 weights, FP8 KV cache and speculative decoding off. The diagram shows logical ranks, not physical wiring.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2=".6"><stop stop-color="#0b1b21"/><stop offset="1" stop-color="#10292b"/></linearGradient>
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#65968b" opacity=".3"/></pattern>
+  </defs>
+  <style>
+    text {font-family:'Segoe UI',Arial,sans-serif}
+    .small,.rank {font-family:Consolas,'Courier New',monospace}
+    .small {font-size:14px;letter-spacing:1.2px;fill:#a9cec4}
+    .rank {font-size:19px;fill:#d4f5e9}
+    .trace {fill:none;stroke:#628e86;stroke-width:2}
+    .flow {stroke:#b2fbd5;stroke-width:3;stroke-linecap:round;stroke-dasharray:15 365;animation:travel 3.5s ease-in-out 2}
+    @keyframes travel {from {stroke-dashoffset:35} to {stroke-dashoffset:-345}}
+    @media (prefers-reduced-motion:reduce) {.flow {animation:none}}
+  </style>
+  <rect width="960" height="280" rx="12" fill="url(#bg)"/>
+  <rect x="430" width="530" height="280" rx="12" fill="url(#dots)"/>
+  <path d="M40 40h24" stroke="#abf5cd" stroke-width="3"/>
+  <text x="77" y="45" class="small">PROPOSED MODAL BASELINE</text>
+  <text x="38" y="112" fill="#effaf5" font-size="54" font-weight="650" letter-spacing="-2">One replica,</text>
+  <text x="38" y="171" fill="#a7f3c9" font-size="54" font-weight="650" letter-spacing="-2">eight GPUs.</text>
+  <path d="M40 192h383" stroke="#375555"/>
+  <text x="40" y="220" fill="#dae8e6" font-size="17">Native FP8 weights · FP8 KV cache</text>
+  <text x="40" y="246" fill="#b9ceca" font-size="16">MTP off for the control run</text>
+  <g>
+    <rect x="524" y="42" width="390" height="200" rx="13" fill="#0d2024" stroke="#426a64"/>
+    <text x="548" y="67" class="small">H200 NODE  /  LOGICAL RANKS</text>
+    <path d="M490 148h399" class="trace"/>
+    <path d="M492 148h397" fill="none" class="flow"/>
+    <path class="trace" d="M584 136v24"/>
+    <path class="trace" d="M672 136v24"/>
+    <path class="trace" d="M760 136v24"/>
+    <path class="trace" d="M848 136v24"/>
+    <g transform="translate(552 83)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">00</text>
+    </g>
+    <g transform="translate(640 83)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">01</text>
+    </g>
+    <g transform="translate(728 83)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">02</text>
+    </g>
+    <g transform="translate(816 83)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">03</text>
+    </g>
+    <g transform="translate(552 165)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">04</text>
+    </g>
+    <g transform="translate(640 165)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">05</text>
+    </g>
+    <g transform="translate(728 165)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">06</text>
+    </g>
+    <g transform="translate(816 165)">
+      <rect width="64" height="48" rx="6" fill="#142f31" stroke="#51837c"/>
+      <rect x="5" y="5" width="54" height="38" rx="3" fill="#0b2326" stroke="#32514f"/>
+      <path d="M12 -5v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5M12 48v5m10 -5v5m10 -5v5m10 -5v5m10 -5v5" stroke="#67998e" stroke-width="2"/>
+      <circle cx="15" cy="15" r="2.3" fill="#93f5c9"/>
+      <text x="34" y="32" text-anchor="middle" class="rank">07</text>
+    </g>
+    <circle cx="491" cy="148" r="5" fill="#b2fbd5"/>
+  </g>
+</svg>
