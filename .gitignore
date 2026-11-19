@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets — never commit these
+.env
+.env.local
+*.pem
+*.key
+kubeconfig
+*.kubeconfig
+
+# Load-test output (regenerate on each run; do not commit measured numbers)
+loadtest/report/*.json
+loadtest/report/*.jsonl
+loadtest/report/*.png
+harness/report/
+report/
+
+# Rendered figures larger than source (keep the .md scenes, not the pngs, unless curated)
+docs/figures/*.png
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
